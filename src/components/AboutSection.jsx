@@ -1,6 +1,24 @@
-import { Briefcase, Code, Server, Cpu } from "lucide-react";
+import { Code, Server, Cpu, Download } from "lucide-react";
 
 export const AboutSection = () => {
+
+   const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    
+    // Set the href to your CV file path
+    // Replace 'your-cv-file.pdf' with the actual path to your CV file
+    link.href = '/cv/Muhammad Awais Qayyum.pdf'; // You can also use a direct URL like 'https://yoursite.com/files/cv.pdf'
+    
+    // Set the download attribute with desired filename
+    link.download = 'Muhammad Awais Qayyum_Resume.pdf'; // Replace with your actual name
+    
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -27,16 +45,17 @@ export const AboutSection = () => {
               creating apps that are <strong>fast, secure, and scalable</strong>.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
               </a>
-              <a
-                href="#"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+              <button
+                onClick={handleDownloadCV}
+                className="inline-flex cursor-pointer items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
+                <Download className="h-4 w-4" />
                 Download CV
-              </a>
+              </button>
             </div>
           </div>
 
