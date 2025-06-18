@@ -8,7 +8,6 @@ const projects = [
     image: "/projects/laOrbit.jpeg",
     tags: ["Next.js", "TailwindCSS", "Stripe", "Vercel"],
     demoUrl: "https://www.laorbit.co/",
-    githubUrl: "#",
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ const projects = [
     image: "/projects/dogeball.jpeg",
     tags: ["TypeScript", "Vercel", "Next.js","Bolt","TailwindCSS"],
     demoUrl: "https://dogeball.vercel.app/",
-    githubUrl: "#",
   },
  {
     id: 3,
@@ -26,7 +24,6 @@ const projects = [
     image: "/projects/freetool.jpeg",
     tags: ["React", "Next.js", "Vercel", "AI Tools", "File Processing"],
     demoUrl: "https://free-tool-main-2n1k.vercel.app",
-    githubUrl: "#",
   },
 ];
 
@@ -88,14 +85,7 @@ export const ProjectsSection = () => {
                     >
                       <ExternalLink size={20} />
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                    
                   </div>
                 </div>
               </div>
